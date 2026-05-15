@@ -8,7 +8,7 @@ import streamlit as st
 #model = load_model("modelo.h5")
 
 # Path del modelo preentrenado
-MODEL_PATH = 'modelodesnInfSVC.pkl'
+MODEL_PATH = 'modelodesnInfANN.pkl'
 
 
 # Se recibe la imagen y el modelo, devuelve la predicción
