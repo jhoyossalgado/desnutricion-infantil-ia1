@@ -26,8 +26,13 @@ def main():
 
     # Se carga el modelo
     if model=='':
+        import pickle
         with open(MODEL_PATH, 'rb') as file:
-            model = pickle.load(file)
+        model = pickle.load(file)
+
+ MODEL_PATH = 'modelodesnInfSVC.pkl'
+
+ 
     
     # Título
     html_temp = """
