@@ -1,5 +1,6 @@
 import numpy as np
 #from flask import Flask, request, jsonify, render_template, url_for
+from sklearn.externals import joblib
 import streamlit as st
 #import joblib
 import pickle
@@ -21,9 +22,9 @@ def main():
     # Se carga el modelo
     if model=='':
         MODEL_PATH = 'modelodesnInfSVC.pkl'
-       # model = joblib.load(MODEL_PATH)
-        with open(MODEL_PATH, 'rb') as file:
-            model = pickle.load(file)
+        model = joblib.load(MODEL_PATH)
+        #with open(MODEL_PATH, 'rb') as file:
+           # model = pickle.load(file)
       
        
 
