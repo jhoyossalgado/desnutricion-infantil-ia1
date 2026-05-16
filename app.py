@@ -9,7 +9,7 @@ import streamlit as st
 #from tensorflow.keras.models import load_model
 #model = load_model("modelo.h5")
 # Path del modelo preentrenado
-MODEL_PATH = 'modelodesn.pkl'
+MODEL_PATH = 'modelodesn1.pkl'
 #model = joblib.load(MODEL_PATH)
 # Se recibe la imagen y el modelo, devuelve la predicción
 def model_prediction(x_in, model):
