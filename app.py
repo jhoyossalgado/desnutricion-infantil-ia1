@@ -16,15 +16,14 @@ def model_prediction(x_in, model):
     preds=model.predict(x)
     return preds
 def main():
- 
     model=''
 
     # Se carga el modelo
     if model=='':
         MODEL_PATH = 'modelodesnInfSVC.pkl'
        # model = joblib.load(MODEL_PATH)
-         with open(MODEL_PATH, 'rb') as file:
-             model = pickle.load(file)
+        with open(MODEL_PATH, 'rb') as file:
+            model = pickle.load(file)
       
        
 
