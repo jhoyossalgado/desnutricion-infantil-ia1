@@ -8,7 +8,7 @@ import streamlit as st
 #from tensorflow.keras.models import load_model
 #model = load_model("modelo.h5")
 # Path del modelo preentrenado
-#MODEL_PATH = 'modelodesn.pkl'
+MODEL_PATH = 'modelodesn.pkl'
 #model = joblib.load(MODEL_PATH)
 # Se recibe la imagen y el modelo, devuelve la predicción
 def model_prediction(x_in, model):
@@ -17,18 +17,15 @@ def model_prediction(x_in, model):
     return preds
 def main():
     model=''
-
     # Se carga el modelo
     if model == '':
-        MODEL_PATH = 'modelodesn.pkl'
+        #MODEL_PATH = 'modelodesn.pkl'
         with open(MODEL_PATH, 'rb') as file:
             model = pickle.load(file)
-      
-       
+           
 
  #MODEL_PATH = 'modelodesnInfSVC.pkl'
 
- 
     
     # Título
     html_temp = """
@@ -37,7 +34,6 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
   #  peso	estatura	tipo_des	Edad_dias	grupo_edad	sexo
-
     # Lecctura de datos
     #Datos = st.text_input("Ingrese los valores : Sexo, edad, etc:")
     P = st.text_input("Peso")
@@ -47,14 +43,12 @@ def main():
     S = st.text_input("Sexo")
     # El botón predicción se usa para iniciar el procesamiento
     if st.button("Predicción :"): 
-
         #x_in = list(np.float_((Datos.title().split('\t'))))
         P  = 0 if P == "" else float(P)
         E  = 0 if E == "" else float(E)
         D  = 0 if D == "" else float(D)
         GE = 0 if GE == "" else float(GE)
         S  = 0 if S == "" else float(S)
-
         x_in = [[P, E, D, GE, S]]
         predictS = model_prediction(x_in, model)
         st.success('Su diagnostico es : {}'.format(predictS[0]).upper())
