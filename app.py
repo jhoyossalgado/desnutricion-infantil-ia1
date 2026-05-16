@@ -1,5 +1,6 @@
 import numpy as np
 #from flask import Flask, request, jsonify, render_template, url_for
+import streamlit as st
 import joblib
 #import pickle
 #from sklearn import svm
