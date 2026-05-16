@@ -19,11 +19,10 @@ def main():
     model=''
 
     # Se carga el modelo
-   if model == '':
-    MODEL_PATH = 'modelodesnInfSVC.pkl'
-
-    with open(MODEL_PATH, 'rb') as file:
-        model = pickle.load(file)
+    if model == '':
+        MODEL_PATH = 'modelodesnInfSVC.pkl'
+        with open(MODEL_PATH, 'rb') as file:
+            model = pickle.load(file)
       
        
 
