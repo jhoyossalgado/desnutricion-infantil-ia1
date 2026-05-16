@@ -4,24 +4,16 @@ import pickle
 #from sklearn import svm
 import streamlit as st
 #from tensorflow.keras.models import load_model
-
 #model = load_model("modelo.h5")
-
 # Path del modelo preentrenado
 MODEL_PATH = 'modelodesnInfSVC.pkl'
-
-
 # Se recibe la imagen y el modelo, devuelve la predicción
 def model_prediction(x_in, model):
-
     x = np.asarray(x_in).reshape(1,-1)
     preds=model.predict(x)
-
     return preds
-
-
 def main():
-    
+ 
     model=''
 
     # Se carga el modelo
@@ -29,7 +21,7 @@ def main():
         MODEL_PATH = 'modelodesnInfSVC.pkl'
         with open(MODEL_PATH, 'rb') as file:
             model = pickle.load(file)
-        import pickle
+      
        
 
  #MODEL_PATH = 'modelodesnInfSVC.pkl'
