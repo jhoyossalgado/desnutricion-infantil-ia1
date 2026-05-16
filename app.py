@@ -3,7 +3,7 @@ import numpy as np
 ##from sklearn.externals import joblib
 import streamlit as st
 import pickle
-import sklearn
+import sciklearn
 #from sklearn import svm
 import streamlit as st
 #from tensorflow.keras.models import load_model
