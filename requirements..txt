@@ -1,8 +1,5 @@
 streamlit
-pandas
 numpy
+pandas
 scikit-learn
-tensorflow
 joblib
-pickle-mixin
-flask
